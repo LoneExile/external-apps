@@ -6,7 +6,7 @@ metadata:
 spec:
   force: false
   interval: 10m0s
-  path: ./system
+  path: ./mongodb/system
   prune: true
   sourceRef:
     kind: GitRepository
@@ -20,22 +20,22 @@ metadata:
 spec:
   force: false
   interval: 10m0s
-  path: ./cozystackresourcedefinitions
+  path: ./mongodb/cozystackresourcedefinitions
   prune: true
   sourceRef:
     kind: GitRepository
     name: external-apps
 ---
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: marketplacepanels
-  namespace: cozy-public
-spec:
-  force: false
-  interval: 10m0s
-  path: ./marketplacepanels
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: external-apps
+# apiVersion: kustomize.toolkit.fluxcd.io/v1
+# kind: Kustomization
+# metadata:
+#   name: marketplacepanels
+#   namespace: cozy-public
+# spec:
+#   force: false
+#   interval: 10m0s
+#   path: ./marketplacepanels
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: external-apps

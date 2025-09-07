@@ -8,7 +8,7 @@ spec:
   ref:
     branch: main
   timeout: 60s
-  url: https://github.com/klinch0/cozy-exrta-apps.git
+  url: https://github.com/LoneExile/external-apps.git
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -18,7 +18,7 @@ metadata:
 spec:
   force: false
   interval: 10m0s
-  path: ./
+  path: ./mongodb
   prune: true
   sourceRef:
     kind: GitRepository
